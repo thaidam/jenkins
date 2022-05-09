@@ -19,7 +19,7 @@ pipeline {
         string(name: 'MYNAME', defaultValue: 'BI', description: 'my name is BI')
     }
     environment {
-        DOCKERHUB_CREDENTIALS=credentials('github_forjen')
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub_forjen')
         NAME = 'thaidam'
         HOVATEN = 'DAMTHAI'
         abc = 'asdf'
