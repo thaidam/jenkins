@@ -20,8 +20,8 @@ pipeline {
     }
     environment {
         DOCKERHUB_CREDENTIALS=credentials('dockerhub')
-        NAME = 'DINHLE'
-        HOVATEN = 'DINHLEHOANG'
+        NAME = 'thaidam'
+        HOVATEN = 'DAMTHAI'
         abc = 'asdf'
     }
     stages {
@@ -33,7 +33,7 @@ pipeline {
                 }
             }
             environment {
-                NAME = 'HOANG'
+                NAME = 'thaidam'
             }
             steps {
                 // sh 'sudo apt install maven'
@@ -99,7 +99,7 @@ pipeline {
                 sh 'echo y | docker container prune '
                 sh 'echo y | docker image prune'
                 sh 'docker container run -d --rm --name my-demo-springboot -p 8082:8080 --network jenkins hoangledinh65/springboot-image:1.0'
-                sh 'echo hoangledinh65'
+                sh 'echo thaidam'
             }
         }
 
